@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../async-cache"
+		},
+		{
+			"path": "../promise_abort"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {}
+}
