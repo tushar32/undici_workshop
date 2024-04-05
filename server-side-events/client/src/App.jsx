@@ -12,7 +12,8 @@ function App() {
 
   useEffect(() => {
 
-    const sse =  new EventSource('http://localhost:3000/config-event-stream');
+     //const sse =  new EventSource('http://localhost:3000/config-event-stream');
+   const sse =  new EventSource('http://localhost:3000/config-event-without-db');
    
     sse.onopen = (event) => {
       console.log('open', event)
@@ -24,7 +25,6 @@ function App() {
       console.log('event', event.data)
       setServerData(JSON.parse(event.data))
     }
-
 
     const fetchData = async () => {
       const response = await fetch('http://localhost:3000/config-event')

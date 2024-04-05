@@ -1,5 +1,5 @@
 {
-  "name": "backend",
+  "name": "pitstop-core",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,16 +8,13 @@
   },
   "keywords": [],
   "author": "",
+  "type": "module",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.20.2",
     "cors": "^2.8.5",
-    "dotenv": "^16.4.5",
+    "eventsource": "^2.0.2",
     "express": "^4.18.3",
-    "mongodb": "^6.5.0",
-    "mongoose": "^8.2.2",
     "nodemon": "^3.1.0",
-    "react-json-view": "^1.21.3",
-    "xml2js": "^0.6.2"
+    "undici": "^6.9.0"
   }
 }
