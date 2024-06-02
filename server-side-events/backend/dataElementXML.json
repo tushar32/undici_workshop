@@ -1,0 +1,883 @@
+{
+    "title": "Purchase Order",
+    "description": "Document issued by a buyer to confirm intention to purchase products and/or services containing quantity, item details, payment terms and delivery details",
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+      "po_additional_document_reference": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0034-An associative reference to Additional Document.</b></div><div><label>businessTerm</label>:<b>Additional Document Reference</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0034-An associative reference to Additional Document.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Additional Document Reference"
+      },
+      "po_allowance_and_charge": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0050-The entity contains the details of the allowance and charge valid for the order header.</b></div><div><label>businessTerm</label>:<b>Allowance And Charge</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0050-The entity contains the details of the allowance and charge valid for the order header.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Allowance And Charge"
+      },
+      "po_assets_expense_account": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0136-The entity contains information related to the assets or expenses account where to record the debit or credit accounting amount, the code defining the type of account (e.g. general, secondary, cost accounting, budget, etc.)..</b></div><div><label>businessTerm</label>:<b>Assets Or Expenses Account</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0136-The entity contains information related to the assets or expenses account where to record the debit or credit accounting amount, the code defining the type of account (e.g. general, secondary, cost accounting, budget, etc.)..</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Assets Or Expenses Account"
+      },
+      "po_blanket_order_reference": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0018-The unique identification assigned by the issuer to a blanket order.</b></div><div><label>businessTerm</label>:<b>Blanket Order Reference</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0018-The unique identification assigned by the issuer to a blanket order.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Blanket Order Reference"
+      },
+      "po_buyer": {
+        "type": "string",
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0011-The entity contains the details of the buyer.</b></div><div><label>businessTerm</label>:<b>Buyer</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0011-The entity contains the details of the buyer.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Buyer",
+        "minLength": 1
+      },
+      "po_carrier": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0035-The entity contains the details of the carrier.</b></div><div><label>businessTerm</label>:<b>Carrier</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0035-The entity contains the details of the carrier.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Carrier"
+      },
+      "po_confirmed_earliest_schedule_date": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "format": "date",
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0108-The earliest date/time on which the delivery is confirmed.</b></div><div><label>businessTerm</label>:<b>Confirmed Earliest Schedule Date</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0108-The earliest date/time on which the delivery is confirmed.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Confirmed Earliest Schedule Date"
+      },
+      "po_confirmed_latest_schedule_date": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "format": "date",
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0109-The latest date/time on which the delivery is confirmed.</b></div><div><label>businessTerm</label>:<b>Confirmed Latest Schedule Date</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0109-The latest date/time on which the delivery is confirmed.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Confirmed Latest Schedule Date"
+      },
+      "po_confirmed_schedule_date": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "format": "date",
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0107-The date, a date and time on which the delivery is confirmed.</b></div><div><label>businessTerm</label>:<b>Confirmed Schedule Date</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0107-The date, a date and time on which the delivery is confirmed.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Confirmed Schedule Date"
+      },
+      "po_consignee": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0038-The entity contains the details of the consignee.</b></div><div><label>businessTerm</label>:<b>Consignee</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0038-The entity contains the details of the consignee.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Consignee"
+      },
+      "po_consignee_agent": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0113-Associates the shipment with the consignee agent.</b></div><div><label>businessTerm</label>:<b>Consignee Agent</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0113-Associates the shipment with the consignee agent.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Consignee Agent"
+      },
+      "po_consignee_order_reference": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0019-The unique identification assigned by the consignee to an order.</b></div><div><label>businessTerm</label>:<b>Consignee Order Reference</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0019-The unique identification assigned by the consignee to an order.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Consignee Order Reference"
+      },
+      "po_cost_assignment_reference": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0033-The Buyer's accounting code applied to the Order as a whole, expressed as text.</b></div><div><label>businessTerm</label>:<b>Cost Assignment Reference</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0033-The Buyer's accounting code applied to the Order as a whole, expressed as text.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Cost Assignment Reference"
+      },
+      "po_country_final_destination": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0124-The code specifying the final country to which the goods are to be delivered.</b></div><div><label>businessTerm</label>:<b>Country Of Final Destination</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0124-The code specifying the final country to which the goods are to be delivered.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Country Of Final Destination"
+      },
+      "po_customer_accountant": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0012-The entity contains the details of the customer accountant.</b></div><div><label>businessTerm</label>:<b>Customer Accountant</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0012-The entity contains the details of the customer accountant.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Customer Accountant"
+      },
+      "po_customer_reference": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0032-A supplementary reference for the Order, expressed as text.</b></div><div><label>businessTerm</label>:<b>Customer Reference</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0032-A supplementary reference for the Order, expressed as text.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Customer Reference"
+      },
+      "po_customs_certificate_reference": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0029-The unique identification assigned by the issuer to a customs certificate.</b></div><div><label>businessTerm</label>:<b>Customs Certificate Reference</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0029-The unique identification assigned by the issuer to a customs certificate.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Customs Certificate Reference"
+      },
+      "po_delivery_document_reference": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0114-Associates the delivery Line with a Document.</b></div><div><label>businessTerm</label>:<b>Delivery Document Reference</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0114-Associates the delivery Line with a Document.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Delivery Document Reference"
+      },
+      "po_delivery_instruction": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0120-The code specifying the delivery instruction.</b></div><div><label>businessTerm</label>:<b>Delivery Instruction</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0120-The code specifying the delivery instruction.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Delivery Instruction"
+      },
+      "po_delivery_instruction_description": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0121-The textual description of a delivery instruction.</b></div><div><label>businessTerm</label>:<b>Delivery Instruction Description</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0121-The textual description of a delivery instruction.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Delivery Instruction Description"
+      },
+      "po_despatch_document_note": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0078-The textual description to be provided on the despatch documents.</b></div><div><label>businessTerm</label>:<b>Despatch Document Note</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0078-The textual description to be provided on the despatch documents.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Despatch Document Note"
+      },
+      "po_despatch_period": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0039-The despatch period of the goods valid for the entire order.</b></div><div><label>businessTerm</label>:<b>Despatch Period</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0039-The despatch period of the goods valid for the entire order.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Despatch Period"
+      },
+      "po_document_information": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0007-Generic document.</b></div><div><label>businessTerm</label>:<b>Document Information</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0007-Generic document.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Document Information"
+      },
+      "po_document_purpose": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0137-A code describing the purpose/function of the document.</b></div><div><label>businessTerm</label>:<b>Document Purpose/Function</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0137-A code describing the purpose/function of the document.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Document Purpose/Function"
+      },
+      "po_earliest_schedule_date": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "format": "date",
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0105-The value of the earliest scheduled date, a date and time in a specified representation.</b></div><div><label>businessTerm</label>:<b>Earliest Schedule Date</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0105-The value of the earliest scheduled date, a date and time in a specified representation.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Earliest Schedule Date"
+      },
+      "po_engineering_change_reference": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0024-The unique identification assigned by the issuer to an engineering change.</b></div><div><label>businessTerm</label>:<b>Engineering Change Reference</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0024-The unique identification assigned by the issuer to an engineering change.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Engineering Change Reference"
+      },
+      "po_export_license_reference": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0028-The unique identification assigned by the issuer to an export license.</b></div><div><label>businessTerm</label>:<b>Export License Reference</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0028-The unique identification assigned by the issuer to an export license.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Export License Reference"
+      },
+      "po_import_license_reference": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0027-The unique identification assigned by the issuer to an import license.</b></div><div><label>businessTerm</label>:<b>Import License Reference</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0027-The unique identification assigned by the issuer to an import license.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Import License Reference"
+      },
+      "po_invoice_currency": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0044-The name or symbol of the monetary unit used for calculation in an invoice.</b></div><div><label>businessTerm</label>:<b>Invoice Currency</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0044-The name or symbol of the monetary unit used for calculation in an invoice.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Invoice Currency"
+      },
+      "po_invoice_currency_exchange": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0052-The exchange rate used for the conversion of the invoice currency from a source currency.</b></div><div><label>businessTerm</label>:<b>Invoice Currency Exchange</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0052-The exchange rate used for the conversion of the invoice currency from a source currency.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Invoice Currency Exchange"
+      },
+      "po_invoicee": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0042-The entity contains the details of the invoicee.</b></div><div><label>businessTerm</label>:<b>Invoicee</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0042-The entity contains the details of the invoicee.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Invoicee"
+      },
+      "po_latest_schedule_date": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "format": "date",
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0106-The value of a latest scheduled date, a date and time in a specified representation.</b></div><div><label>businessTerm</label>:<b>Latest Schedule Date</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0106-The value of a latest scheduled date, a date and time in a specified representation.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Latest Schedule Date"
+      },
+      "po_letter_of_credit_reference": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0026-The unique identification assigned by the issuer to a letter of credit.</b></div><div><label>businessTerm</label>:<b>Letter Of Credit Reference</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0026-The unique identification assigned by the issuer to a letter of credit.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Letter Of Credit Reference"
+      },
+      "po_minus_delivery_quantity": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0111-The quantity tolerance in minus.</b></div><div><label>businessTerm</label>:<b>Minus Delivery Quantity</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0111-The quantity tolerance in minus.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Minus Delivery Quantity"
+      },
+      "po_no_partial_delivery_allowed": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0122-The indicator that no partial delivery of the order is allowed.</b></div><div><label>businessTerm</label>:<b>No Partial Delivery Allowed</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0122-The indicator that no partial delivery of the order is allowed.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "No Partial Delivery Allowed"
+      },
+      "po_order_change_header": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0001-Header information related to the ordering event and order document</b></div><div><label>businessTerm</label>:<b>Order Change Header</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0001-Header information related to the ordering event and order document</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Order Change Header"
+      },
+      "po_order_currency": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0045-The name or symbol of the monetary unit used for calculation in an order.</b></div><div><label>businessTerm</label>:<b>Order Currency</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0045-The name or symbol of the monetary unit used for calculation in an order.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Order Currency"
+      },
+      "po_order_currency_exchange": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0053-The exchange rate used for the conversion of the order currency from a source currency.</b></div><div><label>businessTerm</label>:<b>Order Currency Exchange</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0053-The exchange rate used for the conversion of the order currency from a source currency.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Order Currency Exchange"
+      },
+      "po_order_details": {
+        "type": [
+          "array",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Line Level Order Details</b></div><div><label>businessTerm</label>:<b>Order Details</b></div><div><label>businessDefinition</label>:<b>Line Level Order Details</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Order Details",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "contract_reference": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0016-The unique identification assigned by the issuer to a contract.</b></div><div><label>businessTerm</label>:<b>Order Details-Contract Reference</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0016-The unique identification assigned by the issuer to a contract.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+              "title": "Order Details-Contract Reference"
+            },
+            "order_change": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0002-Grouping of information related to ordered items</b></div><div><label>businessTerm</label>:<b>Order Details- Change</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0002-Grouping of information related to ordered items</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+              "title": "Order Details- Change"
+            },
+            "delivery_quantity": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0110-The value of the quantity of delivery.</b></div><div><label>businessTerm</label>:<b>Order Details-Delivery Quantity</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0110-The value of the quantity of delivery.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+              "title": "Order Details-Delivery Quantity"
+            },
+            "marketplace": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0068-The unique identification given by the marketplace to identify an order line within an order.</b></div><div><label>businessTerm</label>:<b>Order Details-Marketplace</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0068-The unique identification given by the marketplace to identify an order line within an order.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+              "title": "Order Details-Marketplace"
+            },
+            "note": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0080-The free text information related to the order line.</b></div><div><label>businessTerm</label>:<b>Order Details- Note</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0080-The free text information related to the order line.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+              "title": "Order Details- Note"
+            },
+            "number": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0066-The unique identification given by the issuer to identify an order line within an order.</b></div><div><label>businessTerm</label>:<b>Order Details- Number</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0066-The unique identification given by the issuer to identify an order line within an order.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+              "title": "Order Details- Number"
+            },
+            "substituted_product": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0072-Product replaced by the seller. The original ordered quantity and pricing may be different from the substituted item. However, when an item is substituted by the seller, it is assumed that other information, such as shipment details, will be the same.</b></div><div><label>businessTerm</label>:<b>Order Details- Seller Substituted Product</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0072-Product replaced by the seller. The original ordered quantity and pricing may be different from the substituted item. However, when an item is substituted by the seller, it is assumed that other information, such as shipment details, will be the same.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+              "title": "Order Details- Seller Substituted Product"
+            },
+            "status": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0070-The code specifying the status of the order line</b></div><div><label>businessTerm</label>:<b>Order Details-Status</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0070-The code specifying the status of the order line</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+              "title": "Order Details-Status"
+            },
+            "status_reason_code": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0071-The reason for giving a specific order line status</b></div><div><label>businessTerm</label>:<b>Order Details- Status Reason Code</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0071-The reason for giving a specific order line status</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+              "title": "Order Details- Status Reason Code"
+            },
+            "supplier_identification": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0074-The identification given to a Line by the supplier.</b></div><div><label>businessTerm</label>:<b>Order Details- Supplier Identification</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0074-The identification given to a Line by the supplier.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+              "title": "Order Details- Supplier Identification"
+            },
+            "uuid": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0067-The universally unique identification for this order line.</b></div><div><label>businessTerm</label>:<b>Order Details- Uuid</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0067-The universally unique identification for this order line.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+              "title": "Order Details- Uuid"
+            },
+            "additional_allowance_amount": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0131-The sum of all the allowances at the order line before tax or fee.</b></div><div><label>businessTerm</label>:<b>Order Details-Additional Allowance Amount</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0131-The sum of all the allowances at the order line before tax or fee.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+              "title": "Order Details-Additional Allowance Amount"
+            },
+            "amount": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0129-The value of the total order line expressed in the order currency.  Is also used as an alternative for the price.</b></div><div><label>businessTerm</label>:<b>Order Details-Amount</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0129-The value of the total order line expressed in the order currency.  Is also used as an alternative for the price.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+              "title": "Order Details-Amount"
+            },
+            "response": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0004-Grouping of information related to ordered items</b></div><div><label>businessTerm</label>:<b>Order Details-Response</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0004-Grouping of information related to ordered items</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+              "title": "Order Details-Response"
+            },
+            "sales_catalogue_reference": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0088-The unique identification assigned by the issuer to a price and, or sales catalogue.</b></div><div><label>businessTerm</label>:<b>Order Details-Sales Catalogue Reference</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0088-The unique identification assigned by the issuer to a price and, or sales catalogue.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+              "title": "Order Details-Sales Catalogue Reference"
+            },
+            "product": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0065-The description of the product</b></div><div><label>businessTerm</label>:<b>Order Details-Product</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0065-The description of the product</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+              "title": "Order Details-Product"
+            },
+            "supplier": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0082-The entity contains the details of the supplier.</b></div><div><label>businessTerm</label>:<b>Order Details-Supplier</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0082-The entity contains the details of the supplier.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+              "title": "Order Details-Supplier"
+            },
+            "additional charge_amount": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0130-The sum of all the charges at the order line before tax or fee.</b></div><div><label>businessTerm</label>:<b>Order Details-Additional Charge Amount</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0130-The sum of all the charges at the order line before tax or fee.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+              "title": "Order Details-Additional Charge Amount"
+            }
+          }
+        }
+      },
+      "po_order_number_marketplace": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0030-The unique number given by the marketplace to identify an order.</b></div><div><label>businessTerm</label>:<b>Order Number Marketplace</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0030-The unique number given by the marketplace to identify an order.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Order Number Marketplace"
+      },
+      "po_order_response_header": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0003-Header information related to the ordering event and order document</b></div><div><label>businessTerm</label>:<b>Order Response Header</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0003-Header information related to the ordering event and order document</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Order Response Header"
+      },
+      "po_original_order_reference": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0023-The unique identification assigned by the issuer to the original order.</b></div><div><label>businessTerm</label>:<b>Original Order Reference</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0023-The unique identification assigned by the issuer to the original order.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Original Order Reference"
+      },
+      "po_payable_account": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0051-The entity contains information related to the payable account where to record the debit or credit accounting amount, the code defining the type of account (e.g. general, secondary, cost accounting, budget, etc.)..</b></div><div><label>businessTerm</label>:<b>Payable Account</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0051-The entity contains information related to the payable account where to record the debit or credit accounting amount, the code defining the type of account (e.g. general, secondary, cost accounting, budget, etc.)..</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Payable Account"
+      },
+      "po_payee": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0128-The entity contains the details of the payer.</b></div><div><label>businessTerm</label>:<b>Payee</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0128-The entity contains the details of the payer.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Payee"
+      },
+      "po_payer": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0043-The entity contains the details of the payer.</b></div><div><label>businessTerm</label>:<b>Payer</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0043-The entity contains the details of the payer.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Payer"
+      },
+      "po_payment_instructions": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0048-The entity contains the set of information describing the conditions and guarantee under which the payment will or should be made.</b></div><div><label>businessTerm</label>:<b>Payment Instructions</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0048-The entity contains the set of information describing the conditions and guarantee under which the payment will or should be made.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Payment Instructions"
+      },
+      "po_payment_terms": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0049-The entity contains the details of the payment terms and date/time basis.</b></div><div><label>businessTerm</label>:<b>Payment Terms</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0049-The entity contains the details of the payment terms and date/time basis.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Payment Terms"
+      },
+      "po_place_destination": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0119-The internal destination of the ship to location or address, of the products after discharging the transport means</b></div><div><label>businessTerm</label>:<b>Place Of Destination</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0119-The internal destination of the ship to location or address, of the products after discharging the transport means</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Place Of Destination"
+      },
+      "po_place_discharge": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0118-The internal location of the ship to location or address, were the products will be (are) discharged from the transport means.</b></div><div><label>businessTerm</label>:<b>Place Of Discharge</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0118-The internal location of the ship to location or address, were the products will be (are) discharged from the transport means.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Place Of Discharge"
+      },
+      "po_plus_delivery_quantity": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0112-The quantity tolerance in plus.</b></div><div><label>businessTerm</label>:<b>Plus Delivery Quantity</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0112-The quantity tolerance in plus.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Plus Delivery Quantity"
+      },
+      "po_price": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0134-The entity contains the price type, price amount, the allowance and charges and the validity period for the order line or delivery details specified in the depending scheduled lines.</b></div><div><label>businessTerm</label>:<b>Price</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0134-The entity contains the price type, price amount, the allowance and charges and the validity period for the order line or delivery details specified in the depending scheduled lines.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Price"
+      },
+      "po_price_list_reference": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0017-The unique identification assigned by the issuer to a price list.</b></div><div><label>businessTerm</label>:<b>Price List Reference</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0017-The unique identification assigned by the issuer to a price list.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Price List Reference"
+      },
+      "po_pricing_currency": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0046-The name or symbol of the monetary unit used for all prices in an order.</b></div><div><label>businessTerm</label>:<b>Pricing Currency</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0046-The name or symbol of the monetary unit used for all prices in an order.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Pricing Currency"
+      },
+      "po_pricing_currency_exchange": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0055-The exchange rate used for the conversion of the pricing currency from a source currency.</b></div><div><label>businessTerm</label>:<b>Pricing Currency Exchange</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0055-The exchange rate used for the conversion of the pricing currency from a source currency.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Pricing Currency Exchange"
+      },
+      "po_prior_order_change_reference": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0021-The unique identification assigned by the issuer to a prior order change.</b></div><div><label>businessTerm</label>:<b>Prior Order Change Reference</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0021-The unique identification assigned by the issuer to a prior order change.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Prior Order Change Reference"
+      },
+      "po_prior_order_reference": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0020-The unique identification assigned by the issuer to a prior order.</b></div><div><label>businessTerm</label>:<b>Prior Order Reference</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0020-The unique identification assigned by the issuer to a prior order.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Prior Order Reference"
+      },
+      "po_prior_order_response_reference": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0022-The unique identification assigned by the issuer to a prior order response.</b></div><div><label>businessTerm</label>:<b>Prior Order Response Reference</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0022-The unique identification assigned by the issuer to a prior order response.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Prior Order Response Reference"
+      },
+      "po_quote_reference": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0014-The unique identification assigned by the issuer to a quote (offer).</b></div><div><label>businessTerm</label>:<b>Quote Reference (Offer)</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0014-The unique identification assigned by the issuer to a quote (offer).</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Quote Reference (Offer)"
+      },
+      "po_release_period": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0040-The release period of the goods valid for the entire order.</b></div><div><label>businessTerm</label>:<b>Release Period</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0040-The release period of the goods valid for the entire order.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Release Period"
+      },
+      "po_report_reference": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0015-The unique identification assigned by the issuer to a sales report.</b></div><div><label>businessTerm</label>:<b>Sales Report Reference</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0015-The unique identification assigned by the issuer to a sales report.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Sales Report Reference"
+      },
+      "po_request_for_quote_reference": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0013-The unique identification assigned by the issuer to a request for quote.</b></div><div><label>businessTerm</label>:<b>Request For Quote Reference</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0013-The unique identification assigned by the issuer to a request for quote.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Request For Quote Reference"
+      },
+      "po_requisition_reference": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0025-The unique identification assigned by the issuer to a requisition.</b></div><div><label>businessTerm</label>:<b>Requisition Reference</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0025-The unique identification assigned by the issuer to a requisition.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Requisition Reference"
+      },
+      "po_requisitioner": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0083-The party who originated Order</b></div><div><label>businessTerm</label>:<b>Requisitioner</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0083-The party who originated Order</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Requisitioner"
+      },
+      "po_response_reason_code": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0138-A code describing the reason for a specific response such as a rejection. Used on both header and line.</b></div><div><label>businessTerm</label>:<b>Response Reason Code</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0138-A code describing the reason for a specific response such as a rejection. Used on both header and line.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Response Reason Code"
+      },
+      "po_rounding_amount": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0062-The rounding amount (positive or negative) added to the to be paid amount.</b></div><div><label>businessTerm</label>:<b>Rounding Amount</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0062-The rounding amount (positive or negative) added to the to be paid amount.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Rounding Amount"
+      },
+      "po_scedule_period": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0041-The scheduled period of the goods valid for the entire order.</b></div><div><label>businessTerm</label>:<b>Schedule Period</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0041-The scheduled period of the goods valid for the entire order.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Schedule Period"
+      },
+      "po_schedule_date": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "format": "date",
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0104-The value of the scheduled date, a date and time in a specified representation.</b></div><div><label>businessTerm</label>:<b>Schedule Date</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0104-The value of the scheduled date, a date and time in a specified representation.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Schedule Date"
+      },
+      "po_seller": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0008-The entity contains the details of the seller.</b></div><div><label>businessTerm</label>:<b>Seller</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0008-The entity contains the details of the seller.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Seller"
+      },
+      "po_ship_from": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0037-The entity contains the details of the party from whom the products are physically shipped..</b></div><div><label>businessTerm</label>:<b>Ship From</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0037-The entity contains the details of the party from whom the products are physically shipped..</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Ship From"
+      },
+      "po_ship_from_location": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0116-Information directly relating to the address/location from which a delivery is shipped.</b></div><div><label>businessTerm</label>:<b>Ship From Location</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0116-Information directly relating to the address/location from which a delivery is shipped.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Ship From Location"
+      },
+      "po_ship_to": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0036-The entity contains the details of the party to whom the products will be physical delivered.</b></div><div><label>businessTerm</label>:<b>Ship To</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0036-The entity contains the details of the party to whom the products will be physical delivered.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Ship To"
+      },
+      "po_ship_to_location": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0117-The location or address to which a means of transport is destined for the delivery of goods.</b></div><div><label>businessTerm</label>:<b>Ship To Location Or Address</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0117-The location or address to which a means of transport is destined for the delivery of goods.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Ship To Location Or Address"
+      },
+      "po_shipping_grouping_identifier": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0125-The identifier of the shipping grouping of the order with the shipping of other orders.</b></div><div><label>businessTerm</label>:<b>Shipping Grouping Identifier</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0125-The identifier of the shipping grouping of the order with the shipping of other orders.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Shipping Grouping Identifier"
+      },
+      "po_supplier_order_identifier": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0031-An identifier for the Order assigned by the Supplier.</b></div><div><label>businessTerm</label>:<b>Supplier Order Identifier</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0031-An identifier for the Order assigned by the Supplier.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Supplier Order Identifier"
+      },
+      "po_tax_currency": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0047-The name or symbol of the monetary unit requested for tax amounts in invoices related to this order.</b></div><div><label>businessTerm</label>:<b>Tax Currency</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0047-The name or symbol of the monetary unit requested for tax amounts in invoices related to this order.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Tax Currency"
+      },
+      "po_tax_currency_exchange": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0054-The exchange rate used for the conversion of the tax currency from a source currency.</b></div><div><label>businessTerm</label>:<b>Tax Currency Exchange</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0054-The exchange rate used for the conversion of the tax currency from a source currency.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Tax Currency Exchange"
+      },
+      "po_tax_fee_totals": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0064-The entity contains of the order the tax type, tax rate, the taxable amount and the tax amount for the tax type and rate.</b></div><div><label>businessTerm</label>:<b>Tax Fee Totals</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0064-The entity contains of the order the tax type, tax rate, the taxable amount and the tax amount for the tax type and rate.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Tax Fee Totals"
+      },
+      "po_to_be_paid_amount": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0063-The total amount to be paid.</b></div><div><label>businessTerm</label>:<b>To Be Paid Amount</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0063-The total amount to be paid.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "To Be Paid Amount"
+      },
+      "po_total_order_additional_allowance_amount": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0058-The sum of all the allowances at the order header before tax or fee.</b></div><div><label>businessTerm</label>:<b>Total Order Additional Allowance Amount</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0058-The sum of all the allowances at the order header before tax or fee.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Total Order Additional Allowance Amount"
+      },
+      "po_total_order_additional_charge_amount": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0057-The sum of all the charges at the order header before tax or fee.</b></div><div><label>businessTerm</label>:<b>Total Order Additional Charge Amount</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0057-The sum of all the charges at the order header before tax or fee.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Total Order Additional Charge Amount"
+      },
+      "po_total_order_amount": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0061-The total amount of the order, being the sum of total order line amount, total additional amounts and total tax fee amount.</b></div><div><label>businessTerm</label>:<b>Total Order Amount</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0061-The total amount of the order, being the sum of total order line amount, total additional amounts and total tax fee amount.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Total Order Amount"
+      },
+      "po_total_amount": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0056-The value of the total order expressed in the order currency.  Is also used as an alternative for the price.</b></div><div><label>businessTerm</label>:<b>Total Amount</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0056-The value of the total order expressed in the order currency.  Is also used as an alternative for the price.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Total Amount"
+      },
+      "po_total_quantity": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0132-The value of the total order line quantity.</b></div><div><label>businessTerm</label>:<b>Total Quantity</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0132-The value of the total order line quantity.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Total Quantity"
+      },
+      "po_total_tax_fee_amount": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0060-The sum of all tax and fee amounts.</b></div><div><label>businessTerm</label>:<b>Total Tax Fee Amount</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0060-The sum of all tax and fee amounts.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Total Tax Fee Amount"
+      },
+      "po_total_taxable_amount": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0059-The total amount subject to tax or fee.</b></div><div><label>businessTerm</label>:<b>Total Taxable Amount</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0059-The total amount subject to tax or fee.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Total Taxable Amount"
+      },
+      "po_transport_mode": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Field UID: ORD- 0126-The code specifying the mode of transport.</b></div><div><label>businessTerm</label>:<b>Transport Mode</b></div><div><label>businessDefinition</label>:<b>Field UID: ORD- 0126-The code specifying the mode of transport.</b></div><div><label>applicableStandardName</label>:<b>UN/CEFACT</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Transport Mode"
+      },
+      "attachments": {
+        "type": [
+          "array",
+          "null"
+        ],
+        "description": "<root><div><label>description</label>:<b>Purchase Order Attachment</b></div><div><label>businessTerm</label>:<b>Purchase Order Attachment</b></div><div><label>businessDefinition</label>:<b>Purchase Order Attachment</b></div><div><label>applicableStandardName</label>:<b>NA</b></div><div><label>dataFormat</label>:<b>NA</b></div></root>",
+        "title": "Purchase Order Attachment",
+        "items": {
+          "required": [
+            "file_content",
+            "filename"
+          ],
+          "type": "object",
+          "properties": {
+            "filename": {
+              "title": "Filename",
+              "type": "string",
+              "description": "file name with extension. ex:invoice_123.pdf",
+              "minLength": 1
+            },
+            "file_content": {
+              "title": "File Content",
+              "type": "string",
+              "description": "/push or /provide : Base64 Encoded Content\n\n/receive : file_content is S3 bucket key value (use \"GET\" /files/{file_id} to get Base64 Encoded Content)\n",
+              "minLength": 1
+            }
+          },
+          "description": "attachment file type for CDI"
+        }
+      }
+    },
+    "required": [
+      "po_buyer"
+    ]
+  }

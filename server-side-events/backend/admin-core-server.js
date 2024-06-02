@@ -1,22 +1,26 @@
 const express = require('express');
-const DBConnect = require('./database/dbConnect');
 const ConfigCache = require('./database/models/ConfigCache');
 const cors = require('cors');
-const bodyParser = require('body-parser')
+const convert = require('xml-js')
+const bodyParser = require('body-parser');
+const resJsonMiddleWare = require('./middlewares/ResJsonMiddleWare');
+const bodySchema = require('./bodySchema');
+const dataElementXML = require('./dataElementXML');
+const { insertProducer, updateProducer } = require('./logical-eplication/producer');
+const setupPulisher = require('./logical-eplication/setup-publisher');
+const subscriber = require('./logical-eplication/subscriber');
+
 
 const app = express();
 const port = 3000;
 
-DBConnect()
-
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json({
-    limit: '50mb'
-}));
-// app.use(bodyParser.json())
-// app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(cors())
+app.use(resJsonMiddleWare);
+
+setupPulisher()
 
 const sendData = async (req, res) => {
     try {
@@ -93,6 +97,71 @@ app.get('/config-event-stream', (req, res) => {
 });
 
 
+app.post('/convertXMLToJson', async (req, res) => {
+
+  try {
+    // console.log('body', req.body)
+    const xmlJson = req.body;
+
+    for (const key in xmlJson.properties) {
+      const element = xmlJson.properties[key];
+      const jsonData = convert.xml2js(element.description)
+
+      if (jsonData
+        && Array.isArray(jsonData.elements)
+        && jsonData.elements.length
+        && Array.isArray(jsonData.elements[0].elements)
+        && jsonData.elements[0].elements.length) {
+        let ref = [];
+        jsonData.elements[0].elements.forEach((e) => {
+          console.log('elements 2', e.elements[2]?.elements?.[0]?.text)
+          ref.push({ name: e.elements[0]?.elements[0]?.text, value: e.elements[2]?.elements?.[0].text });
+        });
+      }
+    }
+  
+
+     res.json({ message: "XML Converted to JSON", data: dataElementXML },bodySchema);
+   
+  } catch (error) {
+    console.log(error)
+    res.json({message: error.message});
+  }
+
+})
+
+app.get('/convertXMLToJson', async (req, res) => {
+
+  try {
+    // console.log('body', req.body)
+    const xmlJson = dataElementXML;
+
+    for (const key in xmlJson.properties) {
+      const element = xmlJson.properties[key];
+      const jsonData = convert.xml2js(element.description)
+
+      if (jsonData
+        && Array.isArray(jsonData.elements)
+        && jsonData.elements.length
+        && Array.isArray(jsonData.elements[0].elements)
+        && jsonData.elements[0].elements.length) {
+        let ref = [];
+        jsonData.elements[0].elements.forEach((e) => {
+          console.log('elements 2', e.elements[2]?.elements?.[0]?.text)
+          ref.push({ name: e.elements[0]?.elements[0]?.text, value: e.elements[2]?.elements?.[0].text });
+        });
+      }
+    }
+  
+
+     res.json({ message: "XML Converted to JSON", data: xmlJson }, bodySchema);
+   
+  } catch (error) {
+    console.log(error)
+    res.json({message: error.message});
+  }
+
+})
 
 app.post('/config', async (req, res) => {
 
@@ -136,6 +205,33 @@ app.put('/config/:id', async (req, res) => {
     }
 
 })
+
+app.post('/data-element/insert', async (req, res) => {
+    try {
+        const data = req.body;
+        insertProducer(data)
+        res.json({ message: "Data Inserted"},{});
+
+    } catch (error) {
+        console.log(error)
+        res.json({message: error.message});
+    }
+})
+
+app.put('/data-element/update', async (req, res) => {
+  try {
+      const data = req.body;
+      console.log('body', req.body) 
+      updateProducer(data)
+      res.json({ message: "Data Inserted"});
+
+  } catch (error) {
+      console.log(error)
+      res.json({message: error.message});
+  }
+})
+
+subscriber()
 
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
