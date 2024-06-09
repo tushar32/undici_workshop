@@ -1,4 +1,5 @@
  const postgres = require('postgres')
+const pitstopConnect = require('../pistopConnect')
 
 const subscriber = async () => {
   const sql = postgres({
@@ -18,6 +19,10 @@ const subscriber = async () => {
     eventPattern,
     (row, { command, relation, key, old }) => {
       console.log('Received event:',{
+        command,
+        row
+      })
+      pitstopConnect({
         command,
         row
       })

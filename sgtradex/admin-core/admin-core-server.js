@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors())
 app.use(resJsonMiddleWare);
 
-setupPulisher()
+// setupPulisher()
 
 const sendData = async (req, res) => {
     try {
@@ -43,7 +43,6 @@ app.get('/config-event-without-db', (req, res) => {
     res.setHeader('Cache-Control', 'no-cache');
     res.setHeader('Connection', 'keep-alive');
 
-    console.log('SchemaConfig', SchemaConfig)
     if(SchemaConfig.length > 0) {
         res.write(`data: ${JSON.stringify(SchemaConfig)}\n\n`);
     }
@@ -210,7 +209,7 @@ app.post('/data-element/insert', async (req, res) => {
     try {
         const data = req.body;
         insertProducer(data)
-        res.json({ message: "Data Inserted"},{});
+        res.json({ message: "Data Inserted"});
 
     } catch (error) {
         console.log(error)
@@ -231,7 +230,20 @@ app.put('/data-element/update', async (req, res) => {
   }
 })
 
-subscriber()
+app.post('/get-stream', async (req, res) => {
+  try {
+      const { limit } = req.body;
+      console.log('req.body', req.body)
+      //queryStream(limit)
+      res.json({ message: "Data Inserted"});
+
+  } catch (error) {
+      console.log(error)
+      res.json({message: error.message});
+  }
+})
+
+// subscriber()
 
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
