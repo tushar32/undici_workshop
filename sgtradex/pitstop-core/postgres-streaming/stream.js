@@ -4,6 +4,8 @@ import fs, { createReadStream, read } from 'fs'
 import { pipeline } from 'node:stream/promises'
 import pg from 'pg'
 import {Transform } from 'stream'
+import { sendToHighway } from './sendHighway.js'
+import { createGzip } from 'zlib'
 
 
 var pool = new pg.Pool({
@@ -13,7 +15,7 @@ var pool = new pg.Pool({
     user: 'postgres',
     password: 'postgres',
 })
-const writable = fs.createWriteStream('metering-data.csv');
+const writable = fs.createWriteStream("C:/Users/TusharSudhakarBarate/Downloads/metering-data.csv.gz");
 
 const transformStream = new Transform({
     objectMode: true,
@@ -24,7 +26,6 @@ const transformStream = new Transform({
   });
 
 async function queryStream (limit) {
-    try {
   // Get the PostgreSQL client from the pool
   const client = await pool.connect()
 
@@ -41,7 +42,7 @@ async function queryStream (limit) {
 
   // Create a new stream that runs the query
   const query = new QueryStream(slowQuery, [limit], {
-    highWaterMark: 500
+    highWaterMark: 1000
   })
 
   // Run the query and return the stream
@@ -49,46 +50,36 @@ async function queryStream (limit) {
   
   //console.log('Query running',stream)
    // Add error listeners to the streams
-   stream.on('error', (err) => {
-    console.error('Stream error', err);
-    client.release();
-});
+  //  stream.on('error', (err) => {
+  //       console.error('Stream error', err);
+  //       client.release();
+  //   });
 
-  transformStream.on('error', (err) => console.error('Transform stream error', err))
-  writable.on('error', (err) => console.error('Write stream error', err))
   stream.on('end', () => { client.release() })
+
+
+   
+  //stream.pipe(transformStream).pipe(writable)
+
+
+  // const myStream = stream.pipe(JSONStream.stringify()) // return the data to FE using JSONStream
+
+ // await sendToHighway(myStream)
  
-  stream.pipe(JSONStream.stringify()) // return the data to FE using JSONStream
-   // large data json array
-//    const largeDataArray = [
-//     { id: 1, name: 'John' },
-//     { id: 2, name: 'Doe' }
-//   ]
-//    // Push each item of the array as a stringified JSON object into the readable stream
-//    largeDataArray.forEach(item => readableStream.push((item)+ '\n'))
+  // await sendToHighway(chunk);
+
   
-
-
-
-
-
   // Here we are writing a data to file
-    // await pipeline(
-    //   stream,
-    //   transformStream,
-    //   async function* (source) {
-    //     source.setEncoding('utf8');  // Work with strings rather than `Buffer`s.
-    //     for await (const chunk of source) {
-    //         yield await sendToHighway(chunk);
-    //       }
-    //   }
-    // )
-    
-    console.log('Pipeline succeeded')
+  try {
+    await pipeline(
+      stream,
+      transformStream,
+      createGzip(),
+      writable
+    );
+    console.log('Pipeline succeeded');
   } catch (err) {
-    console.error('Pipeline failed', err)
-  } finally {
-    await pool.end()
+    console.error('Pipeline failed', err);
   }
 
   // return stream.pipe(JSONStream.stringify()).pipe(writable)
@@ -96,7 +87,4 @@ async function queryStream (limit) {
 
 
 queryStream(300000)
-
-
-
 
